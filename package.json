@@ -1,7 +1,7 @@
 {
-  "name": "workflow-mcp",
+  "name": "idea-processor-mcp",
   "version": "1.0.0",
-  "description": "Flexible Workflow MCP Server for Complex, Evolving Workflows",
+  "description": "MCP Server for processing ideas through plan creation, PLANNING.md tuning, and CLAUDE.md building",
   "type": "module",
   "main": "src/index.js",
   "scripts": {

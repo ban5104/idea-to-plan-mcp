@@ -1,0 +1,118 @@
+{
+"mcpServers": {
+     "workflow": {
+    "type": "stdio",
+    "command": "node",
+    "args": ["/home/ben_anderson/projects/workflow-mcp/src/index.js"],
+    "cwd": "/home/ben_anderson/projects/workflow-mcp"
+  },
+    "xero": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@xeroapi/xero-mcp-server@latest"
+      ],
+      "env": {
+        "XERO_CLIENT_ID": "E356DD7C94324976BB20F6BDF5D03F30",
+        "XERO_CLIENT_SECRET": "eIjez_a0BRomAfbN_9fFgnc_zjaG09VG3cH-RVkJ2QGmHFsd"
+      }
+    },
+    "Context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {}
+    },
+    "supabase": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "sbp_85b36d23859ae74635fb053a54786ddb0dd0cc5a"
+      ],
+      "env": {}
+    },
+    "puppeteer": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "env": {}
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {}
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/home/ben_anderson/projects"
+      ],
+      "env": {}
+    },
+    "gmail-waybenny": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://n8n.srv818756.hstgr.cloud/mcp/Gmail-Ben/sse",
+        "--header",
+        "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NDJhYmNlZS00YmY0LTQ5MDItOGJkMC0xZjdiMzBmZDNjZjUiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzQ4ODU5MTQyLCJleHAiOjE3NTE0MDcyMDB9.el01JkNGI_8VjFKLRvWHP19oPyPLOlE4oeLUTNuT3K4"
+      ],
+      "env": {}
+    },
+    "google-calendar-waybenny": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://n8n.srv818756.hstgr.cloud/mcp/Calendar-Ben/sse",
+        "--header",
+        "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5NDJhYmNlZS00YmY0LTQ5MDItOGJkMC0xZjdiMzBmZDNjZjUiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzQ4ODU5MTQyLCJleHAiOjE3NTE0MDcyMDB9.el01JkNGI_8VjFKLRvWHP19oPyPLOlE4oeLUTNuT3K4"
+      ],
+      "env": {}
+    },
+    "airtable-waybenny": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://n8n.srv818756.hstgr.cloud/mcp/Airtable-Ben/sse",
+        "--header",
+        "Authorization: Bearer "
+      ],
+      "env": {}
+    },
+    "digitalocean": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@digitalocean/mcp"
+      ],
+      "env": {}
+    }
+  }
+
+}

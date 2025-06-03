@@ -6,21 +6,21 @@
     {
       "id": "idea-to-plan",
       "name": "Idea to Plan Agent",
-      "file": "01-idea-to-plan-agent/custom-instructions/idea-to-plan.md",
+      "file": "agents/01-idea-to-plan/instructions.md",
       "outputs": ["initial-plan.md"],
       "canSkip": false
     },
     {
       "id": "planning-tuner",
       "name": "PLANNING.md Tuner Agent", 
-      "file": "02-planning-tuner-agent/custom-instructions/planning-tuner.md",
+      "file": "agents/02-planning-tuner/instructions.md",
       "requires": ["idea-to-plan"],
       "outputs": ["PLANNING.md"]
     },
     {
       "id": "claude-builder",
       "name": "CLAUDE.md Builder Agent",
-      "file": "03-claude-builder-agent/custom-instructions/claude-builder.md", 
+      "file": "agents/03-claude-builder/instructions.md", 
       "requires": ["planning-tuner"],
       "outputs": ["CLAUDE.md", "PLANNING.md", "build-prompt.txt", "project-ready-package.json"]
     }
