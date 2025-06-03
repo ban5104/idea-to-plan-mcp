@@ -1,0 +1,28 @@
+{
+  "name": "Idea to Project Builder",
+  "version": "1.0.0",
+  "description": "Workflow for processing ideas through plan creation, PLANNING.md tuning, and CLAUDE.md building. Files are created in the user's current working directory.",
+  "steps": [
+    {
+      "id": "idea-to-plan",
+      "name": "Idea to Plan Agent",
+      "file": "01-idea-to-plan-agent/custom-instructions/idea-to-plan.md",
+      "outputs": ["initial-plan.md"],
+      "canSkip": false
+    },
+    {
+      "id": "planning-tuner",
+      "name": "PLANNING.md Tuner Agent", 
+      "file": "02-planning-tuner-agent/custom-instructions/planning-tuner.md",
+      "requires": ["idea-to-plan"],
+      "outputs": ["PLANNING.md"]
+    },
+    {
+      "id": "claude-builder",
+      "name": "CLAUDE.md Builder Agent",
+      "file": "03-claude-builder-agent/custom-instructions/claude-builder.md", 
+      "requires": ["planning-tuner"],
+      "outputs": ["CLAUDE.md", "PLANNING.md", "build-prompt.txt", "project-ready-package.json"]
+    }
+  ]
+}

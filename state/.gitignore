@@ -1,0 +1,3 @@
+# Ignore all state files - these are runtime generated
+*
+!.gitignore

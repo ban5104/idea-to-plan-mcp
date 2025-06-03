@@ -1,0 +1,15 @@
+{
+  "enabledMcpjsonServers": [
+    "workflow",
+    "xero",
+    "Context7",
+    "supabase",
+    "puppeteer",
+    "memory",
+    "filesystem",
+    "gmail-waybenny",
+    "google-calendar-waybenny",
+    "airtable-waybenny",
+    "digitalocean"
+  ]
+}
